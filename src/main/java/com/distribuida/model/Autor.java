@@ -98,7 +98,6 @@ public class Autor {
     }
 
     //ToString
-
     @Override
     public String toString() {
         return "Autor{" +

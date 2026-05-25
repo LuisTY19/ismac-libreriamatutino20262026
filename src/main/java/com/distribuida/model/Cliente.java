@@ -97,6 +97,8 @@ public class Cliente {
         this.correo = correo;
     }
 
+
+    //ToString
     @Override
     public String toString() {
         return "Cliente{" +

@@ -52,6 +52,7 @@ public class Categoria {
     }
 
     //ToString
+
     @Override
     public String toString() {
         return "Categoria{" +
