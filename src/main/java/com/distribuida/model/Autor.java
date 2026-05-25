@@ -1,23 +1,23 @@
 package com.distribuida.model;
 
+
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "cliente")
-public class Cliente {
-
+@Table(name = "autor")
+public class Autor {
 
     //Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_cliente")
-    private int idCliente;
-    @Column(name = "id_cedula")
-    private String cedula;
-    @Column(name = "id_nombre")
+    @Column(name = "id_autor")
+    private int idAutor;
+    @Column(name =  "id_nombre")
     private String nombre;
     @Column(name = "id_apellido")
     private String apellido;
+    @Column(name = "id_pais")
+    private String pais;
     @Column(name = "id_direccion")
     private String direccion;
     @Column(name = "id_telefono")
@@ -26,14 +26,14 @@ public class Cliente {
     private String correo;
 
     //Constructor vacio
-    public Cliente( ){ }
+    public Autor(){}
 
     //Constructor con parámetros
-    public Cliente(int idCliente, String cedula, String nombre, String apellido, String direccion, String telefono, String correo) {
-        this.idCliente = idCliente;
-        this.cedula = cedula;
+    public Autor(int idAutor, String nombre, String apellido, String pais, String direccion, String telefono, String correo){
+        this.idAutor = idAutor;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.pais = pais;
         this.direccion = direccion;
         this.telefono = telefono;
         this.correo = correo;
@@ -41,20 +41,12 @@ public class Cliente {
 
     //Métodos getters and setters
 
-    public int getIdCliente() {
-        return idCliente;
+    public int getIdAutor() {
+        return idAutor;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
-    public String getCedula() {
-        return cedula;
-    }
-
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
+    public void setIdAutor(int idAutor) {
+        this.idAutor = idAutor;
     }
 
     public String getNombre() {
@@ -73,12 +65,12 @@ public class Cliente {
         this.apellido = apellido;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getPais() {
+        return pais;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
     public String getTelefono() {
@@ -89,6 +81,14 @@ public class Cliente {
         this.telefono = telefono;
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
     public String getCorreo() {
         return correo;
     }
@@ -97,13 +97,15 @@ public class Cliente {
         this.correo = correo;
     }
 
+    //ToString
+
     @Override
     public String toString() {
-        return "Cliente{" +
-                "idCliente=" + idCliente +
-                ", cedula='" + cedula + '\'' +
+        return "Autor{" +
+                "idAutor=" + idAutor +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
+                ", pais='" + pais + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", correo='" + correo + '\'' +

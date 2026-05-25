@@ -13,8 +13,8 @@ public class LibreriaApplication {
 		System.out.println("Hola mundo desde spring boot!!!...");
 
 		Cliente cliente = new Cliente(
-				"1754274098"
-				,1
+				1
+				,"1754274098"
 				,"Alan"
 				,"Brito"
 				,"Quito"
