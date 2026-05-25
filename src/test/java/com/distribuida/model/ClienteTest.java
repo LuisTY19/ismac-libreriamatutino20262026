@@ -12,8 +12,8 @@ public class ClienteTest {
     @BeforeEach
     public void setup(){
         cliente = new Cliente(
-                "1753274099"
-                ,1
+                1
+                ,"1753274099"
                 ,"Bob"
                 ,"Toronja"
                 ,"Fondo de bikini"
